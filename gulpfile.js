@@ -1,15 +1,15 @@
 const { src, dest, watch, parallel } = require('gulp');
 
-const scss = require('gulp-sass')(require('sass')),
-	fileinclude = require('gulp-file-include'),
-	cfg = require('./package.json').config,
-	csso = require('gulp-csso'),
-	plumber = require('gulp-plumber'),
-	concat = require('gulp-concat'),
-	autoprefixer = require('gulp-autoprefixer'),
-	browserSync = require('browser-sync').create(),
-	terser = require('gulp-terser'),
-	browserslist = ['> 1%, last 3 versions, not dead'];
+const sass = require('gulp-dart-sass');
+(fileinclude = require('gulp-file-include')),
+	(cfg = require('./package.json').config),
+	(csso = require('gulp-csso')),
+	(plumber = require('gulp-plumber')),
+	(concat = require('gulp-concat')),
+	(autoprefixer = require('gulp-autoprefixer')),
+	(browserSync = require('browser-sync').create()),
+	(terser = require('gulp-terser')),
+	(browserslist = ['> 1%, last 3 versions, not dead']);
 
 function html() {
 	return src([cfg.srcDir + '/*.html'])
@@ -25,11 +25,7 @@ function html() {
 
 function styles() {
 	return src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: true })
-		.pipe(
-			scss({
-				errLogToConsole: true,
-			}),
-		)
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: browserslist,
@@ -43,11 +39,7 @@ function styles() {
 function stylesMin() {
 	return src(cfg.srcDir + '/**/*.{scss,sass}')
 		.pipe(plumber())
-		.pipe(
-			scss({
-				errLogToConsole: true,
-			}),
-		)
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: browserslist,
@@ -91,18 +83,15 @@ function watching() {
 	watch([cfg.srcDir + 'imgs/**/*'], imageSync);
 }
 
-
 async function loadPrettier() {
-    const prettier = await import('gulp-prettier');
-    return prettier.default;
+	const prettier = await import('gulp-prettier');
+	return prettier.default;
 }
 
 async function pretty() {
-    const prettier = await loadPrettier();
-    return src(['src/**/*', '!src/imgs/**/*'])
-        .pipe(prettier())
-        .pipe(dest('src'));
-};
+	const prettier = await loadPrettier();
+	return src(['src/**/*', '!src/imgs/**/*']).pipe(prettier()).pipe(dest('src'));
+}
 
 exports.format = pretty;
 exports.stylesMin = stylesMin;

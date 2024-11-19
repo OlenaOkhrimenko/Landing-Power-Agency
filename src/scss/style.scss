@@ -1,6 +1,6 @@
-@import './helpers/reset';
-@import './helpers/variables';
-@import './helpers/mixins/breakpoints';
-@import './helpers/extends/extends';
-@import './helpers/extends/buttons_extends';
-@import './base';
+@use './helpers/reset';
+@use './helpers/variables';
+@use './helpers/mixins/breakpoints';
+@use './helpers/extends/extends';
+@use './helpers/extends/buttons_extends';
+@use './base';
