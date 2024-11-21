@@ -1,3 +1,5 @@
+@use './helpers/abstracts' as *;
+
 html {
 	// font-size: calc(100dvw / 1920 * 10);
 
@@ -50,6 +52,12 @@ footer {
 	text-align: center;
 	justify-content: center;
 	background-color: #ccc;
+
+	
+	// @include bp($point_2, min) {
+	// 	background-color: tomato;
+	// }
+	
 }
 
 .hello {
@@ -63,9 +71,9 @@ footer {
 	font-size: 5rem;
 
 	text-align: center;
-	p {
-		color: coral;
-	}
+	// p {
+	// 	color: $color_black;
+	// }
 }
 
 /* remove */
