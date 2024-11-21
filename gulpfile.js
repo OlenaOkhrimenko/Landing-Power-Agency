@@ -4,7 +4,6 @@ const sass = require('gulp-dart-sass');
 (fileinclude = require('gulp-file-include')),
 	(cfg = require('./package.json').config),
 	(csso = require('gulp-csso')),
-	(plumber = require('gulp-plumber')),
 	(concat = require('gulp-concat')),
 	(autoprefixer = require('gulp-autoprefixer')),
 	(browserSync = require('browser-sync').create()),
@@ -28,7 +27,7 @@ function styles() {
 		src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: true })
 			.pipe(
 				sass({
-					outputStyle: 'expanded', // expanded/compressed/nested/compact
+					outputStyle: 'expanded', // expanded/compressed
 					silenceDeprecations: ['legacy-js-api'], // Disable old API warnings
 				}).on('error', sass.logError),
 			)
@@ -45,10 +44,10 @@ function styles() {
 
 function stylesMin() {
 	return (
-		src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: true })
+		src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: false })
 			.pipe(
 				sass({
-					outputStyle: 'compressed', // expanded/compressed/nested/compact
+					outputStyle: 'compressed', // expanded/compressed
 					silenceDeprecations: ['legacy-js-api'], // Disable old API warnings
 				}).on('error', sass.logError),
 			)
@@ -102,5 +101,5 @@ async function pretty() {
 }
 
 exports.format = pretty;
-exports.stylesMin = stylesMin;
+exports.cssmin = stylesMin;
 exports.default = parallel(html, styles, scripts, imageSync, watching, browsersync);

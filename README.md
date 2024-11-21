@@ -21,3 +21,7 @@
 4.  Pretty your files:
 
         gulp format
+
+5.  Minify your css:
+
+        gulp cssmin
