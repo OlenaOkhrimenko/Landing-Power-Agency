@@ -88,7 +88,7 @@ footer {
   }
 
   .header__in{
-	width: 11.7rem;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
@@ -159,9 +159,7 @@ text-decoration-skip-ink: none;
 text-wrap: wrap;
 margin-bottom: 4.2rem;
   }
-h2{
-	position: absolute;
-}
+
 .products_logo{
 	position: relative;
 	top: 9.5rem;
@@ -469,7 +467,7 @@ text-decoration-skip-ink: none;
 }
 
 .comments_nav__img_w {
-	display: flex; /* Центрирование содержимого */
+	display: flex; 
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
@@ -479,8 +477,8 @@ text-decoration-skip-ink: none;
 	margin-bottom: 1.9rem;
 }
 .comments_nav__img {
-	width: 100%; /* Убедитесь, что изображение заполняет контейнер */
-	height: auto; /* Сохраняйте пропорции */
+	width: 100%; 
+	height: 100%; 
 }
 
 .comments_nav__data {
