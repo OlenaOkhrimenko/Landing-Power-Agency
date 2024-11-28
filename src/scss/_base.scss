@@ -1,4 +1,6 @@
-@use './helpers/abstracts' as *;
+
+@use './helpers/variables' as *;
+
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
@@ -9,11 +11,12 @@ html {
 html,
 body {
 	height: 100%;
-	// font-family: $font_1;
 	font-weight: 400;
 	scroll-behavior: smooth;
 }
-
+body {
+	font-family: $font_1;
+}
 .wrapper {
 	width: 100%;
 	display: flex;
@@ -33,11 +36,13 @@ body {
 }
 
 .container {
-	// max-width: 126rem;
+	max-width: 114.4rem;
 	width: 100%;
-	max-width: 1380px;
-	padding: 0 30px;
+	/* 	padding: 0 2rem;
+ */
+	margin: 0 auto;
 }
+
 
 /* remove */
 body {
@@ -46,11 +51,10 @@ body {
 
 header,
 footer {
-	height: 38px;
-	padding: 30px 0;
+	height: 3.8rem;
+	padding: 3rem 0;
 	background-color: white;
-	margin-bottom: 124px;
-
+	margin-bottom: 12.4rem
 	// @include bp($point_2, min) {
 	// 	background-color: tomato;
 	// }
@@ -84,17 +88,17 @@ footer {
   }
 
   .header__in{
-	width: 1170px;
+	width: 11.7rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
 	align-items: center;
-	column-gap: 266px;
+	column-gap: 26.6rem;
   }
 
   .header_logo{
-	width: 94px;
-	height: 38px;
+	width: 9.4rem;
+	height: 3.8rem;
   }
 
   .header_img_logo{
@@ -142,36 +146,36 @@ footer {
   }
   
   .hero__title{
-	width: 716px;
-height: 220px;
+width: 71.6rem;
+height: 22rem;
 font-family: Poppins;
-font-size: 60px;
+font-size: 6rem;
 font-weight: 700;
-line-height: 110px;
+line-height: 11rem;
 letter-spacing: 0.20000000298023224px;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 text-wrap: wrap;
-margin-bottom: 42px;
+margin-bottom: 4.2rem;
   }
 h2{
 	position: absolute;
 }
 .products_logo{
 	position: relative;
-	top: 95px;
-	left: 180px;
+	top: 9.5rem;
+	left: 18rem;
 
 }
   .hero__descr{
-	width: 555px;
-	height: 108px;
+	width: 55.5rem;
+	height: 10.8rem;
 	opacity: 0.8px;
 	font-family: Poppins;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 400;
-	line-height: 36px;
+	line-height: 3.6rem;
 	text-align: left;
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
@@ -182,33 +186,34 @@ h2{
 	flex-direction: row;
 	justify-content: start;
 	align-items: center;
-	column-gap: 35px;
+	column-gap: 3.5rem;
 
   }
   .btn_base.btn--purple{
-	width: 181px;
-	height: 47px;
-	padding: 10px 40px 10px 40px;
-	gap: 10px;
-	border-radius: 12px;
+	width: 18.1rem;
+	height: 4.7rem;
+	padding: 1rem 4rem 1rem 4rem;
+	gap: 1rem;
+	border-radius: 1.2rem;
 	background: #706FE5;
 	font-family: Poppins;
-	font-size: 18px;
+	font-size: 1.8rem;
 	font-weight: 600;
-	line-height: 27px;
+	line-height: 2.7rem;
 	text-align: center;
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
 	color: #FFFFFF;
+	z-index: 1000;
   }
 
 .white_btn_text{
-	width: 146px;
-height: 48px;
+	width: 14.6rem;
+height: 4.8rem;
 	font-family: Poppins;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 2.4rem;
 	text-align: left;
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
@@ -216,8 +221,8 @@ height: 48px;
 	
 }
 .round_btn{
-	width: 48px;
-	height: 48px;
+	width: 4.8rem;
+	height: 4.8rem;
 
 }
 .btn_base.btn--white{
@@ -225,9 +230,9 @@ height: 48px;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	column-gap: 13px;
-	width: 252px;
-	height: 80px;
+	column-gap: 1.3rem;
+	width: 25.2rem;
+	height: 8.0rem;
 }
 
 .btn_base.btn--white:active,
@@ -235,10 +240,9 @@ height: 48px;
 .btn_base.btn--white:hover {
 
 border: 1px solid #706FE5;
-border-radius: 40px;
+border-radius: 4.0rem;
 }
 .hero__picture{
-
 width: 43%;
 
 }
@@ -257,8 +261,280 @@ width: 43%;
 	background-color: grey;
 }
 .circle.circle--purple{
-	width: 83px;
-height: 83px;
-angle: 90 deg;
+	width: 8.3rem;
+height: 8.3rem;
 background-color: #706FE5;
+}
+.help{
+	width: 113.9rem;
+	display: flex;
+	flex-direction: row;
+
+
+}
+
+.help__general{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.help__title {
+width: 48.7rem;
+font-family: Poppins;
+font-size: 4.0rem;
+font-weight: 700;
+line-height: 5.2rem;
+letter-spacing: 0.20000000298023224px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #1E1F4B;
+margin-bottom: 2.0rem;
+
+}
+.help__descr{
+	width: 45.7rem;
+	font-family: Poppins;
+	font-size: 2.0rem;
+	font-weight: 400;
+	line-height: 3.6rem;
+	text-align: left;
+	text-underline-position: from-font;
+	color: #1B1D21;
+	margin-bottom: 5.0rem;
+
+}
+.btn_subscribe{
+	width: 49.1rem;
+	height: 7.2rem;
+	border-radius: 1.2rem;
+	opacity: 10%;
+	background: #706FE5;
+	display: flex;
+	flex-direction: row;
+
+}
+.help_email_img{
+width: 2.4rem;
+height: 2.4rem;
+opacity: 0.7px;
+
+}
+.email_img_picture{
+	width: 100%;
+	height: 100%;
+	object-position: center;
+  	object-fit: cover;
+}
+.help__menu {
+
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	row-gap: 3.0rem;
+	column-gap: 3.0rem;
+	flex-wrap: wrap;
+
+}
+
+.help_menu_items{
+
+width: 26.2rem;
+height: 15.8rem;
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+}
+.help_menu_items__img_box{
+width: 5.0rem;
+height: 5.0rem;
+
+
+}
+.help_menu_items__title {
+width: 13.2rem;
+font-family: Poppins;
+font-size: 2.0rem;
+font-weight: 600;
+line-height: 2.8rem;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #1E1F4B;
+
+}
+
+.help_menu_items__descr{
+width: 26.2rem;
+opacity: 0.8px;
+color: #2E3E5C;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+
+}
+.form__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 39rem;
+    height: 5.5rem;
+    background-color: rgba(112, 111, 229, 0.1);
+}
+.form__icon {
+    width: 3.4rem;
+    height: 2.4rem;
+}
+.form__input {
+    flex: 1;
+    border: none;
+    /* padding: 10px; */
+    color: #333;
+    border-radius: 8px;
+    background: transparent;
+    padding-right: 4;
+}
+.form__button {
+    background-color: #706fe5;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding: 2rem 4rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 14rem;
+    height: 2.4rem;
+    box-shadow: 0px 6px 20px 0px rgba(112, 111, 229, 0.5019607843);
+    margin-right: 1rem;
+}
+
+.section.section--bg {
+	background-color: rgba(112, 111, 229, 0.02);
+}
+
+.section__title {
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 1.5;
+	color: $color_title;
+}
+.section__title.section__title--centr {
+	text-align: center;
+}
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 7rem;
+}
+
+.comments_title {
+	margin-bottom: 5rem;
+}
+
+.comments__item {
+	display: block;
+	max-width: 67rem;
+	width: 100%;
+}
+
+.comments__item_text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	color: #03014c;
+}
+
+.comments_nav {
+	display: flex;
+	gap: 7rem;
+}
+
+.comments_nav__img_w {
+	display: flex; /* Центрирование содержимого */
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	overflow: hidden;
+	height: 8.6rem;
+	width: 8.6rem;
+	margin-bottom: 1.9rem;
+}
+.comments_nav__img {
+	width: 100%; /* Убедитесь, что изображение заполняет контейнер */
+	height: auto; /* Сохраняйте пропорции */
+}
+
+.comments_nav__data {
+	text-align: center;
+}
+.comments_nav__name {
+	font-weight: bold;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.5;
+	text-align: center;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.comments_nav__pos {
+/* 	font-size: 2rem;
+ */	font-weight: 500;
+/* 	line-height: 3rem;
+ */	text-align: center;
+	
+}
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.comments_nav__img {
+    border-radius: 50%;
+    width: 8.6rem;
+    height: 8.6rem;
+    object-fit: cover;
+}
+
+.comments_nav__name {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-top: 1rem;
+}
+
+.comments_nav__pos {
+    font-size: 1.6rem;
+    color: #555;
 }
