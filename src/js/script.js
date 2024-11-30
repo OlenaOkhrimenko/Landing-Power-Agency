@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const swiper = new Swiper('.swiper-container', {
+/*const swiper = new Swiper('.swiper-container', {
 	slidesPerView: 3, 
 	spaceBetween: 30, 
 	loop: true, 
@@ -25,4 +25,18 @@ const swiper = new Swiper('.swiper-container', {
 			spaceBetween: 30,
 		},
 	},
+});
+*/
+
+const sliderName = new Swiper('.swiperClass', {
+	navigation: {
+		prevEl: '.btn_1',
+		nextEl: '.btn_2',
+	},
+	pagination: {
+		el: '.pagination_1',
+		clickable: true,
+	},
+	mousewheel: true,
+	keyboard: true,
 });
