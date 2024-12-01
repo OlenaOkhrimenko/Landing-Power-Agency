@@ -46,7 +46,7 @@ body {
 
 /* remove */
 body {
-	font-family: cursive;
+	font-family: Poppins, sans-serif;
 }
 
 header{
@@ -89,8 +89,7 @@ header{
   .header__in{
 
 	display: flex;
-	flex-direction: row;
-	justify-content: start;
+	justify-content: center;
 	align-items: center;
 	column-gap: 26.6rem;
   }
@@ -99,6 +98,7 @@ header{
 	width: 9.4rem;
 	height: 3.8rem;
 	background-color: white;
+	
   }
 
 
@@ -449,13 +449,15 @@ margin-bottom: 5.7rem;
   }
 
 .nav__link{
-	font-family: Inter;
-	font-size: 16px;
+	font-family: Poppins;
+	font-size: 1.4rem;
 	font-weight: 400;
-	line-height: 28px;
+	line-height: 2rem;
 	text-align: left;
 	text-underline-position: from-font;
-	text-decoration-skip-ink: none;	
+	text-decoration-skip-ink: none;
+	color: #FFFFFF;
+	
 }
 
 .nav__link.nav__link--header{
@@ -681,13 +683,6 @@ a{
 	text-align: center;
   }
   
-  .container {
-	max-width: 114.4rem;
-	width: 100%;
-	padding: 0 2rem;
-	margin: 0 auto;
-  }
-  
   .comments {
 	position: relative;
 	display: block;
@@ -820,6 +815,25 @@ a{
 	white-space: nowrap;
   }/*# sourceMappingURL=style.css.map */
 
+  .container.container--dots::after, .container.container--dots::before {
+    position: absolute;
+    content: "";
+    width: 9.8rem;
+    height: 7rem;
+    background-image: url(../imgs/dots.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container.container--dots::before {
+    top: 25rem;
+}
+
+.container.container--dots::after {
+    top: 60rem;
+    left: 100rem;
+}
   //section logo companies slider
   *{
 	margin: 0;
